@@ -29,13 +29,11 @@ document.getElementById('name1').addEventListener('click', showHideDesc);
 // create a div element with an id of 'descrip2'
 //append this element to the div element with the id of 'name2'
 
-let name2Elem = document.getElementById('name2');
-
 let description2Elem = document.createElement('div');
 description2Elem.id = 'descrip2';
 description2Elem.style.display = 'none';
 description2Elem.innerHTML = 'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan\'s 1987-88 NBA season.';
-name2Elem.appendChild(description2Elem);
+document.getElementById('name2').appendChild(description2Elem);
 
 function showHideDescription2(){
     if (descrip2.style.display === 'none'){
@@ -48,6 +46,18 @@ function showHideDescription2(){
 document.getElementById('name2').addEventListener('click', showHideDescription2);
 
 //4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
+
+let thumbsUp = document.getElementsByClassName('fa-thumbs-up');
+
+for (let i = 0; i < thumbsUp.length; i++){
+    let counter = document.createElement('span');
+    let count = 0;
+    thumbsUp[i].appendChild(counter);
+    thumbsUp[i].addEventListener('click', function(){
+        count += 1;
+        counter.innerHTML = count;
+    });
+}
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
 
