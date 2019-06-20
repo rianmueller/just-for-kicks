@@ -61,26 +61,18 @@ for (let i = 0; i < thumbsUp.length; i++){
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
 
-let plusPriceDiv = document.getElementById('price4');
-let plusPrice = 58000;
-plusPriceDiv.innerHTML = '<span id = plusPriceSpan>' + plusPrice + '</span><span id="increase"><i class="far fa-plus-square"></i></span>';
 let plusImg = document.getElementsByClassName('fa-plus-square');
 
 plusImg[0].addEventListener('click', function(){
-    plusPrice += 1;
-    plusPriceSpan.innerHTML = plusPrice;
+    document.getElementById('price4').childNodes[0].nodeValue++;
 });
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
 
-let lessPriceDiv = document.getElementById('price5');
-let lessPrice = 2500;
-lessPriceDiv.innerHTML = '<span id = lessPriceSpan>' + lessPrice + '</span><span id="decrease"><i class="far fa-minus-square"></i> </span>';
 let minusImg = document.getElementsByClassName('fa-minus-square');
 
 minusImg[0].addEventListener('click', function(){
-    lessPrice -= 1;
-    lessPriceSpan.innerHTML = lessPrice;
+    document.getElementById('price5').childNodes[0].nodeValue--;
 });
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
@@ -101,18 +93,12 @@ block1Images[2].addEventListener('click', function(){
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
-let aj14PriceDiv = document.getElementById('price8');
-let aj14Price = 7000;
-aj14PriceDiv.innerHTML = '<span id = aj14PriceSpan>' + aj14Price + '</span><span id="oneUp"><i class="far fa-plus-square"></i></span><span id="oneDown"><i class="far fa-minus-square"></i></span></div>';
-
 plusImg[1].addEventListener('click', function(){
-    aj14Price += 1;
-    aj14PriceSpan.innerHTML = aj14Price;
+    document.getElementById('price8').childNodes[0].nodeValue++;
 });
 
 minusImg[1].addEventListener('click', function(){
-    aj14Price -= 1;
-    aj14PriceSpan.innerHTML = aj14Price;
+    document.getElementById('price8').childNodes[0].nodeValue--;
 });
 
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
