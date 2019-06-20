@@ -85,7 +85,11 @@ minusImg[0].addEventListener('click', function(){
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
 
+let block3Images = document.querySelectorAll("div.block3 > img");
 
+block3Images[1].addEventListener('mouseover', function(){
+    block3Images[1].src = 'https://www.sneakerlegends.com/images/stories/virtuemart/product/(BRAND%20NEW)%20Jordan%2011%20Retro%20Space%20Jam%20(2016).jpg'
+});
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
 
