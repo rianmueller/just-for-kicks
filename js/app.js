@@ -47,17 +47,18 @@ document.getElementById('name2').addEventListener('click', showHideDescription2)
 
 //4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
 
-let thumbsUp = document.getElementsByClassName('fa-thumbs-up');
+let thumbsUp = document.querySelectorAll('.fa-thumbs-up');
 
 for (let i = 0; i < thumbsUp.length; i++){
     let counter = document.createElement('span');
-    let count = 0;
+    counter.className = 'counters';
     thumbsUp[i].appendChild(counter);
-    thumbsUp[i].addEventListener('click', function(){
-        count += 1;
-        counter.innerHTML = count;
-    });
-}
+    thumbsUp[i].addEventListener('click', increment);
+};
+
+function increment(){
+    this.querySelector('.counters').innerHTML++;
+};
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
 
